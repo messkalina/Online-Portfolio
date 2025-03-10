@@ -1,3 +1,4 @@
+
 import React from "react";
 
 interface SectionLabelProps {
@@ -5,7 +6,7 @@ interface SectionLabelProps {
 }
 
 const SectionLabel: React.FC<SectionLabelProps> = ({ text }) => {
-  return <div className="text-[#666] mx-0 my-5 px-10 py-0">[ {text} ]</div>;
+  return <div className="text-[#666] text-sm px-5 py-2">[ {text} ]</div>;
 };
 
 export default SectionLabel;

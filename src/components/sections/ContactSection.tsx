@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import SectionLabel from "../ui/SectionLabel";
 
@@ -42,69 +43,75 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-neutral-100 p-10">
-      <SectionLabel text="Contact" />
-      <h2 className="text-5xl font-bold mx-0 my-5 max-sm:text-[32px]">
-        LET'S TALK
-      </h2>
-      <form onSubmit={handleSubmit} className="max-w-[800px]">
-        <div className="flex gap-5 mb-5 max-md:flex-col">
-          <input
-            type="text"
-            name="firstName"
-            placeholder="First name"
-            value={formData.firstName}
-            onChange={handleChange}
-            className="flex-1 border rounded p-2.5 border-solid border-[#ddd]"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="flex-1 border rounded p-2.5 border-solid border-[#ddd]"
-            required
-          />
+    <section className="bg-[#f1f1f1]">
+      <div className="max-w-screen-xl mx-auto">
+        <SectionLabel text="Contact" />
+        <div className="p-5">
+          <h2 className="text-6xl font-black my-10 max-sm:text-5xl">
+            LET'S TALK
+          </h2>
+          <form onSubmit={handleSubmit} className="max-w-[800px]">
+            <div className="grid grid-cols-2 gap-5 mb-5 max-md:grid-cols-1">
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First name"
+                value={formData.firstName}
+                onChange={handleChange}
+                className="bg-transparent border-b pb-3 focus:outline-none"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="bg-transparent border-b pb-3 focus:outline-none"
+                required
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-5 mb-5 max-md:grid-cols-1">
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last name"
+                value={formData.lastName}
+                onChange={handleChange}
+                className="bg-transparent border-b pb-3 focus:outline-none"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone number"
+                value={formData.phone}
+                onChange={handleChange}
+                className="bg-transparent border-b pb-3 focus:outline-none"
+              />
+            </div>
+            <div className="mb-10">
+              <input
+                type="text"
+                name="message"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full bg-transparent border-b pb-3 focus:outline-none"
+                required
+              />
+            </div>
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="bg-black text-white rounded-full px-6 py-3 font-medium text-sm"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
-        <div className="flex gap-5 mb-5 max-md:flex-col">
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Last name"
-            value={formData.lastName}
-            onChange={handleChange}
-            className="flex-1 border rounded p-2.5 border-solid border-[#ddd]"
-            required
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone number"
-            value={formData.phone}
-            onChange={handleChange}
-            className="flex-1 border rounded p-2.5 border-solid border-[#ddd]"
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full border rounded mb-5 p-2.5 border-solid border-[#ddd]"
-            required
-          />
-        </div>
-        <button
-          type="submit"
-          className="bg-black text-white rounded cursor-pointer px-5 py-2.5 border-[none]"
-        >
-          Send Message
-        </button>
-      </form>
+      </div>
     </section>
   );
 };
