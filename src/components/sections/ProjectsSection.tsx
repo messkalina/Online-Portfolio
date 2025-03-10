@@ -1,4 +1,3 @@
-
 import React from "react";
 import SectionLabel from "../ui/SectionLabel";
 import ProjectCard from "../ui/ProjectCard";
@@ -50,29 +49,28 @@ const projectsData = [
 
 const ProjectsSection: React.FC = () => {
   return (
-    <section className="max-w-screen-xl mx-auto">
+    <div id="work">
       <SectionLabel text="Selected work" />
-      <div className="px-5 py-10">
-        <h2 className="text-[80px] font-black leading-none mb-5 max-sm:text-[60px]">
+      <section className="p-10">
+        <h2 className="text-[64px] font-bold mb-5 max-sm:text-[40px]">
           PROJECTS
         </h2>
-        <div className="text-xl max-w-[600px] mb-10">
+        <div className="text-lg max-w-[600px] mb-10">
           Explore our recent projects showcasing creativity, innovation, and
           impactful design solutions.
         </div>
-        <div className="grid grid-cols-3 gap-0 max-md:grid-cols-2 max-sm:grid-cols-1">
-          {projectsData.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {projectsData.map((project) => (
             <ProjectCard
               key={project.id}
               title={project.title}
               description={project.description}
               variant={project.variant}
-              index={index + 1}
             />
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
