@@ -24,15 +24,13 @@ const CaseStudy: React.FC = () => {
         
         {/* Goal Strategy Section */}
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="bg-blue-600 text-white p-8 md:p-16">
+          <div className="p-8 md:p-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-8">GOAL STRATEGY</h2>
-          </div>
-          <div className="bg-red-600 text-white p-8 md:p-16">
             <p className="text-lg mb-8">
               "We are committed to great design and art direction. Our mission is to bring the best creative solutions to complex communications."
             </p>
             <p className="text-sm mb-4">— Name to be updated —</p>
-            <div className="border-t border-white pt-6 mt-8">
+            <div className="border-t border-gray-300 pt-6 mt-8">
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm font-semibold">Brand Philosophy & Positioning</p>
@@ -43,10 +41,16 @@ const CaseStudy: React.FC = () => {
               </div>
             </div>
           </div>
+          <div className="bg-red-600 h-[400px] md:h-auto">
+            {/* This is an image placeholder - no text */}
+          </div>
         </div>
         
         {/* Problem Design Section */}
         <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="bg-blue-600 h-[400px] md:h-auto">
+            {/* This is an image placeholder - no text */}
+          </div>
           <div className="bg-white p-8 md:p-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-8">PROBLEM DESIGN</h2>
             <p className="text-lg mb-6">
@@ -57,9 +61,7 @@ const CaseStudy: React.FC = () => {
               <p className="text-sm font-semibold mb-2">Keyword 2</p>
               <p className="text-sm font-semibold mb-2">Keyword 3</p>
             </div>
-          </div>
-          <div className="bg-white p-8 md:p-16 flex items-center">
-            <div>
+            <div className="mt-12">
               <p className="text-lg mb-6">
                 1. Lorem ipsum dolor sit amet
               </p>
@@ -73,10 +75,10 @@ const CaseStudy: React.FC = () => {
           </div>
         </div>
         
-        {/* UX/UX Design Section */}
+        {/* UX/UI Design Section */}
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="bg-blue-600 text-white p-8 md:p-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8">UX/UX DESIGN</h2>
+          <div className="p-8 md:p-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8">UX/UI DESIGN</h2>
             <p className="text-lg mb-6">
               We focused on a streamlined, intuitive user experience that puts content first. Our design principles prioritize both aesthetics and functionality to create engaging interactions.
             </p>
@@ -91,20 +93,22 @@ const CaseStudy: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="bg-red-600 text-white p-8 md:p-16">
+          <div className="bg-red-600 h-[400px] md:h-auto">
+            {/* This is an image placeholder - no text */}
           </div>
         </div>
         
         {/* Objective/Solution Section */}
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="bg-white p-8 md:p-16">
+          <div className="bg-blue-600 h-[400px] md:h-auto">
+            {/* This is an image placeholder - no text */}
+          </div>
+          <div className="p-8 md:p-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-8">OBJECTIVE/ SOLUTION</h2>
             <p className="text-lg mb-6">
-              See what our satisfied clients say about working with us.
+              Our objective was to create a cohesive brand identity that resonates with the target audience and effectively communicates the client's values and offerings.
             </p>
-          </div>
-          <div className="bg-blue-600 text-white p-8 md:p-16 flex items-center">
-            <div>
+            <div className="mt-8">
               <p className="text-xl font-bold mb-2">"The team is amazing"</p>
               <p className="text-lg mb-6">
                 Client focused on results
@@ -120,22 +124,37 @@ const CaseStudy: React.FC = () => {
             Our strategic process ensures consistent results and client satisfaction every time.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
-            <div className="bg-blue-600 text-white p-8 flex flex-col">
-              <span className="text-2xl font-bold mb-4">01</span>
-              <h3 className="text-xl font-semibold mb-4">Understanding Your Critical Needs</h3>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="bg-blue-600 h-[200px]">
+              {/* Process image 1 */}
             </div>
-            <div className="bg-red-600 text-white p-8 flex flex-col">
-              <span className="text-2xl font-bold mb-4">02</span>
-              <h3 className="text-xl font-semibold mb-4">Crafting Innovative Solutions</h3>
+            <div className="bg-red-600 h-[200px]">
+              {/* Process image 2 */}
             </div>
-            <div className="bg-blue-600 text-white p-8 flex flex-col">
-              <span className="text-2xl font-bold mb-4">03</span>
-              <h3 className="text-xl font-semibold mb-4">Bringing Ideas to Life</h3>
+            <div className="bg-blue-600 h-[200px]">
+              {/* Process image 3 */}
             </div>
-            <div className="bg-red-600 text-white p-8 flex flex-col">
-              <span className="text-2xl font-bold mb-4">04</span>
-              <h3 className="text-xl font-semibold mb-4">Seamless Deployment and Beyond</h3>
+            <div className="bg-red-600 h-[200px]">
+              {/* Process image 4 */}
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
+            <div>
+              <span className="text-2xl font-bold mb-2 block">01</span>
+              <h3 className="text-xl font-semibold">Understanding Your Critical Needs</h3>
+            </div>
+            <div>
+              <span className="text-2xl font-bold mb-2 block">02</span>
+              <h3 className="text-xl font-semibold">Crafting Innovative Solutions</h3>
+            </div>
+            <div>
+              <span className="text-2xl font-bold mb-2 block">03</span>
+              <h3 className="text-xl font-semibold">Bringing Ideas to Life</h3>
+            </div>
+            <div>
+              <span className="text-2xl font-bold mb-2 block">04</span>
+              <h3 className="text-xl font-semibold">Seamless Deployment and Beyond</h3>
             </div>
           </div>
         </div>
